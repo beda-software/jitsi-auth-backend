@@ -8,7 +8,8 @@
     "license": "MIT",
     "scripts": {
         "start": "DEBUG=@aidbox/node-app:*  nodemon",
-        "typecheck": "tsc"
+        "typecheck": "tsc",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@aidbox/node-server-sdk": "^2.1.1",
