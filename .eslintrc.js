@@ -13,6 +13,7 @@ module.exports = {
         tsconfigRootDir: __dirname,
     },
     rules: {
+        'no-restricted-imports': ['error', { patterns: ['aidbox-react/src'] }],
         'import/order': [
             'error',
             {
