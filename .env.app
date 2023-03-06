@@ -1,0 +1,10 @@
+APP_INIT_CLIENT_ID=root
+APP_INIT_CLIENT_SECRET=secret
+APP_INIT_URL=http://aidbox:8888
+
+APP_ID=app
+APP_SECRET=secret
+APP_URL=http://app:8081
+APP_PORT=8081
+
+AIDBOX_URL=http://aidbox:8888

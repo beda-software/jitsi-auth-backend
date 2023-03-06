@@ -1,0 +1,21 @@
+services:
+  aidbox-ts-generator:
+    image: "bedasoftware/aidbox-ts-generator:latest"
+    command:
+      [
+        "-o",
+        "/tmp/aidbox.ts",
+        "-u",
+        "http://aidbox:8888",
+        "--user",
+        "$AIDBOX_CLIENT_ID",
+        "--pass",
+        "$AIDBOX_CLIENT_SECRET"
+      ]
+    env_file:
+      - .env.aidbox
+    depends_on:
+      aidbox-healthcheck:
+        condition: service_healthy
+    volumes:
+      - ./src/typings/aidbox.ts:/tmp/aidbox.ts
