@@ -29,10 +29,11 @@ export const getJitsiAuthToken: TOperation = {
 
         const token_secret = new TextEncoder().encode(secret);
         const jwt = await new jose.SignJWT({ room: '*' })
-            .setProtectedHeader({ alg: 'HS256' })
+            .setProtectedHeader({ alg: 'HS256', typ: 'JWT' })
             .setIssuedAt()
             .setIssuer(issuer)
             .setAudience(audience)
+            .setSubject('*')
             .setExpirationTime(tokenExpirationPeriod)
             .sign(token_secret);
 
