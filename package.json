@@ -9,12 +9,14 @@
     "scripts": {
         "start": "DEBUG=@aidbox/node-app:*  nodemon",
         "typecheck": "tsc",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "build": "tsc -p tsconfig.build.json"
     },
     "dependencies": {
         "@aidbox/node-server-sdk": "^2.1.1",
         "aidbox-react": "^1.6.0",
-        "dotenv": "^16.0.3"
+        "dotenv": "^16.0.3",
+        "jose": "^4.13.1"
     },
     "devDependencies": {
         "@tsconfig/node-lts": "^18.12.1",
@@ -38,5 +40,12 @@
         "hooks": {
             "pre-commit": "lint-staged"
         }
+    },
+    "nodemonConfig": {
+        "watch": [
+            "src"
+        ],
+        "ext": "ts,yaml",
+        "exec": "ts-node --transpile-only --pretty src/index.ts"
     }
 }
