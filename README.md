@@ -1,0 +1,22 @@
+# Aidbox app that issues jitsi JWT tokens
+
+## Configuration
+Aidbox app settings (example)
+```
+APP_INIT_CLIENT_ID=root
+APP_INIT_CLIENT_SECRET=secret
+APP_INIT_URL=http://devbox:8080
+
+APP_ID=jitsi-auth-app
+APP_SECRET=secret
+APP_URL=http://jitsi-auth:8081
+APP_PORT=8081
+
+AIDBOX_URL=http://devbox:8080
+```
+Jitsi settings should be taken from jistsi server instalation:
+```
+AUTH_JWT_SECRET
+AUTH_JWT_ACCEPTED_ISSUERS
+AUTH_JWT_ACCEPTED_AUDIENCES
+```
