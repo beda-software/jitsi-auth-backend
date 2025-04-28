@@ -14,13 +14,13 @@ APP_PORT=8081
 
 AIDBOX_URL=http://devbox:8080
 ```
-Jitsi settings:
+App settings to issue jitsi token:
 ```
 AUTH_JWT_SECRET
 AUTH_JWT_ACCEPTED_ISSUERS
 AUTH_JWT_ACCEPTED_AUDIENCES
 ```
-Should be taken from jistsi server instalation:
+Should be taken from jitsi server configuration:
 ```
 JWT_APP_SECRET
 JWT_ACCEPTED_ISSUERS
