@@ -20,3 +20,6 @@ AUTH_JWT_SECRET
 AUTH_JWT_ACCEPTED_ISSUERS
 AUTH_JWT_ACCEPTED_AUDIENCES
 ```
+
+## Docker hub:
+https://hub.docker.com/r/bedasoftware/jitsi-auth-backend
