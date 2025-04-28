@@ -26,6 +26,9 @@ JWT_APP_SECRET
 JWT_ACCEPTED_ISSUERS
 JWT_ACCEPTED_AUDIENCES
 ```
+AUTH_JWT_ACCEPTED_ISSUERS,AUTH_JWT_ACCEPTED_AUDIENCES,JWT_ACCEPTED_ISSUERS,JWT_ACCEPTED_AUDIENCES
+should be a domain name of the EMR.
+`emr.beda.software`
 
 ## Docker hub:
 https://hub.docker.com/r/bedasoftware/jitsi-auth-backend
