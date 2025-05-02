@@ -6,7 +6,7 @@ import { generateOperationOutcome } from '../utils';
 export const getJitsiAuthToken: TOperation = {
     method: 'POST',
     path: ['auth', '$jitsi-token'],
-    handlerFn: async (_request) => {
+    handlerFn: async (request) => {
         const tokenExpirationPeriod = '1d';
         const secret = process.env.AUTH_JWT_SECRET;
         if (!secret) {
@@ -28,7 +28,10 @@ export const getJitsiAuthToken: TOperation = {
         }
 
         const token_secret = new TextEncoder().encode(secret);
-        const jwt = await new jose.SignJWT({ room: '*' })
+        const jwt = await new jose.SignJWT({
+            room: '*',
+            context: { user: { id: request['oauth/user'].id } },
+        })
             .setProtectedHeader({ alg: 'HS256', typ: 'JWT' })
             .setIssuedAt()
             .setIssuer(issuer)
